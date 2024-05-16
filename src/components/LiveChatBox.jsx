@@ -65,7 +65,7 @@ const LiveChatBox = () => {
           </button>
         </div>
       </form>
-    </div >
+    </div>
   );
 }
 
