@@ -15,36 +15,36 @@ const Head = () => {
   const [showSuggestions, setShowSuggestions] = useState(false);
   const [suggestionsList, setSuggestionsList] = useState([])
 
-  // const searchCache = useSelector(store => store.search.cachedResults)
+  const searchCache = useSelector(store => store.search.cachedResults)
 
-  // // fetch searchedList from api
-  // const fetchSearchedList = async () => {
-  //   const data = await fetch(``);
-  //   const json = await data.json();
-  //   setSuggestionsList(json[1]);
-  //   // update cache
-  //   dispatch(cachedResults({
-  //     [searchQuery]: json[1]
-  //   }))
-  // };
+  // fetch searchedList from api
+  const fetchSearchedList = async () => {
+    const data = await fetch(``);
+    const json = await data.json();
+    setSuggestionsList(json[1]);
+    // update cache
+    dispatch(cachedResults({
+      [searchQuery]: json[1]
+    }))
+  };
 
 
-  // useEffect(() => {
-  //   console.log(suggestionsList)
-  //   const timer = setTimeout(() => {
-  //     // if present, we will directly set
-  //     if (searchCache[searchQuery]) {
-  //       setSuggestionsList(searchCache[searchQuery]);
-  //     }
-  //     // if not present, we will do api call
-  //     else {
-  //       fetchSearchedList()
-  //     }
-  //   }, 200)
-  //   return () => {
-  //     clearTimeout(timer)
-  //   }
-  // }, [searchQuery])
+  useEffect(() => {
+    console.log(suggestionsList)
+    const timer = setTimeout(() => {
+      // if present, we will directly set
+      if (searchCache[searchQuery]) {
+        setSuggestionsList(searchCache[searchQuery]);
+      }
+      // if not present, we will do api call
+      else {
+        fetchSearchedList()
+      }
+    }, 200)
+    return () => {
+      clearTimeout(timer)
+    }
+  }, [searchQuery])
 
   const toggleMenuHandler = () => {
     dispatch(toggleMenu())

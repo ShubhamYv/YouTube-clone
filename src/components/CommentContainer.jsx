@@ -6,7 +6,7 @@ import { commentsList } from '../utils/commentsList';
 const CommentContainer = () => {
   return (
     <div className='flex flex-col gap-3'>
-      <h1 className='font-bold text-2xl'>4,733 Comments</h1>
+      <h1 className='font-bold text-2xl'>421 Comments</h1>
       <div className='flex flex-row gap-3 items-center'>
         <Avatar
           alt="User Avatar"
@@ -18,7 +18,7 @@ const CommentContainer = () => {
           placeholder="Add a comment..."
         />
       </div>
-      <div>
+      <div className="border-l-2 pl-3">
         <CommentList comments={commentsList} />
       </div>
     </div>
