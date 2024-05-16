@@ -43,6 +43,27 @@ export const commentsList = [
             ]
           }
         ]
+      },
+      {
+        "userId": 71,
+        "userName": "Emma White",
+        "userImage": "https://randomuser.me/api/portraits/men/1.jpg",
+        "text": "This is a reply without further replies",
+        "replies": []
+      },
+      {
+        "userId": 81,
+        "userName": "Oliver Johnson",
+        "userImage": "https://randomuser.me/api/portraits/men/8.jpg",
+        "text": "This is another reply without further replies",
+        "replies": []
+      },
+      {
+        "userId": 91,
+        "userName": "Sophia Brown",
+        "userImage": "https://randomuser.me/api/portraits/women/9.jpg",
+        "text": "This is a reply without further replies",
+        "replies": []
       }
     ]
   },

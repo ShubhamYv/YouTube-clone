@@ -1,5 +1,5 @@
-import { Avatar } from '@mui/material'
-import React from 'react'
+import { Avatar } from '@mui/material';
+import React from 'react';
 
 const CommentsCard = ({ comment }) => {
   return (
@@ -15,7 +15,7 @@ const CommentsCard = ({ comment }) => {
         <p className=''>{comment?.text}</p>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default CommentsCard
+export default CommentsCard;
